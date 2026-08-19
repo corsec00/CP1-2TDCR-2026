@@ -3,12 +3,16 @@ Há um AKS disponível em RG-CloudSec-FIAP\AKSFIAPCloudSec00x.
 
 Dentro deste AKS, há 2 NodesPool: nodepool1 e aplicativos
 
+Questões:
+<BR>(a) Crie um _Namespace_ para a sua aplicação com o seu RM **(4 ptns)**
+<BR>(b) Com base no seu _namespace_, no login server do seu ACR e no tag do seu repositório, suba a aplicação (adapte o arquivo Deployment.yaml de acordo com suas necessidades) **(4 pnts)**
+<BR>(c) Publique e teste a sua aplicação (acesso HTTP ou HTTPS) - **(2 Pnts)**
+
+
+
 Se sua aplicação de votação (ou outra que achar necessário) estiver publicada no seu ACR criado de maneira independente, vc precisará vincular este ACR ao AKS
 Se ainda não tiver feito, mude o repositório da sua aplicação (provavelmente Azure-Vote) para o valor do seu RM
-Para as respostas:
-(a) Crie um _Namespace_ para a sua aplicação com o seu RM **(4 ptns)**
-(b) Com base no seu _namespace_, no login server do seu ACR e no tag do seu repositório, suba a aplicação (adapte o arquivo Deployment.yaml de acordo com suas necessidades) **(4 pnts)**
-(c) Publique e teste a sua aplicação (acesso HTTP ou HTTPS) - **(2 Pnts)**
+
 
 Observações e dicas:
 - Se a sua aplicação não estiver no repositório do ACR [CloudsecFiaplss001], você deverá criar seu próprio ACR ou jogar a aplicação para o [CloudsecFiaplss001]. 
@@ -22,8 +26,8 @@ Observações e dicas:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-a
-  namespace: app-seurm
+  name: app-seurm
+  namespace: appns-seurm
 spec:
   replicas: 1
   selector:
