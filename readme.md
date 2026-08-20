@@ -21,7 +21,7 @@ Observações e dicas:
 - Não precisa criar um novo AKS nem apagar o AKS existente. Os nodes já estão configurados para receber a aplicação (cuidado para não ser penalizado na criação de recursos).
 - Use seu agente preferido de IA para ajudar nestas questões. Principalmente quando tiver dúvidas sobre a linha de comando correta.
 
-Código para o deploy do seu repositório no AKLjjj
+Código para o deploy do seu repositório no AKS (altere as informações necessárias)
 `Deployment.yaml`
 ```
 
